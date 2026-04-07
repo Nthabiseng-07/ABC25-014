@@ -2,7 +2,7 @@
 body
 {
   font-family: Helvetica,sans-serif;
-  background-color: deep purple; 
+  background-color: deeppurple; 
   color:  bright white;
   text-align: center; 
 }
@@ -22,5 +22,5 @@ nav a
 
 h1
 {
-  color: electric blue ;
+  color: electricblue ;
 } 
