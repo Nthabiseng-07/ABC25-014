@@ -1,7 +1,7 @@
-# Urban Myth Website 
+# Urban Street Apparels  Website 
 
 ## Project Description 
-Urban Myth is a streetwear clothing brand website developed for the Web and Multimedia Development assignment. 
+Urban Street Apparels is a streetwear clothing brand website developed for the Web and Multimedia Development assignment. 
 The website showcases fashion products and provides information about the brand. 
 
 ## Features 
