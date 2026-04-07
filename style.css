@@ -1,1 +1,26 @@
+/* style.css*/
+body
+{
+  font-family: Helvetica,sans-serif;
+  background-color: midnightblue; 
+  color: white;
+  text-align: center; 
+}
 
+nav 
+{ 
+  background-color: black; 
+  padding: 10px;
+}
+
+nav a 
+{
+  color:gold;
+  margin: 10px;
+  text-decoration: none;
+}
+
+h1
+{
+  color: aqua;
+} 
