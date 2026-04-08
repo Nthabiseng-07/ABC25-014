@@ -17,7 +17,7 @@ body {
     text-align: top-left;
     font-size: 50px;
     letter-spacing: 4px;
-    color: aqua;
+    color: dark-blue;
     padding: 30px 0 10px 0;
     font-weight: 700;
 }
@@ -26,7 +26,7 @@ nav {
     text-align: center;
     margin: 20px 0;
     padding: 15px 0;
-    border-top: 1px solid lightgray;   /* was #ddd */
+    border-top: 1px solid lightgray;   
     border-bottom: 1px solid lightgray;
     background-color: white;
 }
