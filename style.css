@@ -26,9 +26,9 @@ nav {
     text-align: center;
     margin: 20px 0;
     padding: 15px 0;
-    border-top: 1px subtle darkred;   
-    border-bottom: 1px subtle darkred;
-    background-color: turquoise;
+    border-top: 1px slight lightgray;   
+    border-bottom: 1px slight lightgrey;
+    background-color: white;
 }
 
 nav a {
