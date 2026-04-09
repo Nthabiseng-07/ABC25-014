@@ -45,9 +45,9 @@ nav
     text-align: center;
     margin: 20px 0;
     padding: 15px 0 ;
-    border-top: 1px slight lightgray;   
-    border-bottom: 1px slight lightgrey;
-    background-color:black;
+    border-top: 1px biege;   
+    border-bottom: 1px biege;
+    background-color:burgundy;
 }
 
 nav a
@@ -90,7 +90,7 @@ nav a:hover
     transform: translateY(-50%);
     font-size: 60px;
     font-weight: 800;
-    color: white;
+    color: biege;
     text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
     letter-spacing: 3px;
     line-height: 1.2;
