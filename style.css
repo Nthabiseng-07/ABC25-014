@@ -45,8 +45,8 @@ nav
     text-align: center;
     margin: 20px 0;
     padding: 15px 0 ;
-    border-top: 1px biege;   
-    border-bottom: 1px biege;
+    border-top: 1px solid lightgray;   
+    border-bottom: 1px solid lightgray;
     background-color:burgundy;
 }
 
@@ -137,7 +137,7 @@ h2
     margin: 20px auto;
     padding: 20px;
     text-align: center;
-    background: white;
+    background: biege;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
