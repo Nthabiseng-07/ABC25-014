@@ -243,6 +243,74 @@ footer
     }
 }
 
+/*Fullscreen Hero*/
+.hero-fullscreen
+{
+    height:100vh;
+    background-size:cover;
+        background-position:center;
+    background-repeat:no-repeat;
+    position:relative;
+}
+.hero-overlay
+{
+    position:absolute;
+    bottom:20%;
+    left:10%;
+    background:rgba(0,0,0,0.7);
+    padding:30px 50px;
+    border-radius:8px;
+        text-align:center;
+}
+
+.hero-overlay h2
+{ 
+    color:white;
+    font-size:20px;
+    margin:15px 0;
+}
+.hero-overlay p
+{ 
+    color:white;
+    font-size:20px;
+    margin:15px 0;
+}
+
+hero-btn
+{
+    display:inline-block;
+    background:firebrick;
+    color:white;
+    padding:12px 30px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    transition:background 0.3s; 
+}
+.hero-btn:hover
+{
+    background:black;
+}
+.section-title
+{
+    text-align:center;
+    font-size:40px;
+    margin: 50px 0 25px;
+    letter-spacing:2px;
+}
+
+
+
+    
+
+
+
+    
+    
+
+
+
+
 
 
 
