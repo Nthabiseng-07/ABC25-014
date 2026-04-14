@@ -5,7 +5,7 @@ h2
 }
 body.homepage
 {
-    background-image:url('"C:\Users\nthab\Downloads\streetwear-person.jpg"');
+    background-image:url('streetwear-person.jpg');
     
 
     background-size: cover;
@@ -29,7 +29,8 @@ body.homepage .logo,
 body.homepage nav,
 body.homepage .section-title,
 body.homepage footer,
-body.homepage h2 {
+body.homepage h2
+{
     position: relative;
     z-index: 1;
 }
