@@ -8,7 +8,7 @@ The website showcases fashion products and provides information about the brand.
 - Home page with brand information
 - About page with the description of the brand
 - Shop page which displays the clothing products
-- Gallery page with the images
+- 
 - Contact page with the details
 - Feedback form which is for the users
 
