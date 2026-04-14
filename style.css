@@ -56,10 +56,10 @@ body {
 
 .logo .bottom-line {
     display: block;
-    font-size: 28px;
-    letter-spacing: 8px;
-    font-weight: 400;
-    color: dimgray;
+    font-size: 52px;
+    letter-spacing: 6px;
+    font-weight: 800;
+    color: darkred;
     margin-top: 5px;
 }
 
