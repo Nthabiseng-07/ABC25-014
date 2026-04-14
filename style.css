@@ -3,6 +3,59 @@ h2
     text-align:bottom-left;
     
 }
+body.homepage
+{
+    background-image:url('"C:\Users\nthab\Downloads\streetwear-person.jpg"');
+    
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body.homepage::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+body.homepage .logo,
+body.homepage nav,
+body.homepage .section-title,
+body.homepage footer,
+body.homepage h2 {
+    position: relative;
+    z-index: 1;
+}
+
+body.homepage .logo,
+body.homepage nav a,
+body.homepage .section-title,
+body.homepage footer p {
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+}
+
+body.homepage nav {
+    background: rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+body.homepage nav a {
+    color: white;
+}
+
+body.homepage footer {
+    background: rgba(0,0,0,0.7);
+}
+
 
 
 * {
