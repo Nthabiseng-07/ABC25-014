@@ -7,7 +7,7 @@
 
 body.homepage {
     background-image: url('images/streetwear-person.jpg');
-    background-size: auto;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
