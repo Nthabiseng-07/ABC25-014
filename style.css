@@ -7,10 +7,11 @@
 
 body.homepage {
     background-image: url('images/streetwear-person.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: top center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-color:black;
 }
 
 body.homepage::before {
