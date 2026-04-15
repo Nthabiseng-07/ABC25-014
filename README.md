@@ -1,14 +1,14 @@
-# Urban Street Apparels  Website 
+# Urban Street Apparels Website 
 
 ## Project Description 
-Urban Street Apparels is a streetwear clothing brand website developed for the Web and Multimedia Development assignment. 
-The website showcases fashion products and provides information about the brand. 
+Urban Street Apparels is a website about streetwear clothing brand developed for the Web and Multimedia Development assignment. 
+The website showcases the latest fashion products and provides information about the brand. 
 
 ## Features 
-- Home page with brand information
-- About page with the description of the brand
+- Home page which contains information about the brand.
+- About page with the description of the brand. 
 - Shop page which displays the clothing products
-- Contact page with the details
+- Contact page with the contact details
 - Feedback form which is for the users
 
   ## Technologies Used
@@ -20,4 +20,4 @@ The website showcases fashion products and provides information about the brand.
   https://github.com/Nthabiseng-07/ABC25-014
 
   ## Author
-  Nthabiseng 
+  Nthabiseng Mmabogosi Gabaitse 
