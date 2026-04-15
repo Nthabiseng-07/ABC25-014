@@ -1,43 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*
+{
+   margin:0;
+   padding:0;
+   box-sizing: border-box; 
 }
 
-
-body.homepage {
+body.homepage
+{
     background-image: url('images/streetwear-person.jpg');
     background-size: cover;
-    background-position: center;
+    background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-   
-}
 
-body.homepage::before {
+}
+body.homepage::before
+{
     content: "";
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0,0,0,0.5);
     z-index: -1;
 }
 
+body:not(.homepage)
 
-body:not(.homepage) {
+{
     background-color: whitesmoke;
-    color: black;
+    color:black;
 }
-
-body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1,6;
 }
-
-
-.logo {
+.logo
+{
     text-align: center;
     font-size: 50px;
     letter-spacing: 4px;
@@ -45,46 +46,43 @@ body {
     font-weight: 700;
 }
 
-.logo .top-line {
+.logo.top-line
+{
     display: block;
-    font-size: 52px;
+    font-size: 54px;
     letter-spacing: 6px;
     font-weight: 800;
-    color: darkred;
-    text-shadow: 0 0 5px red, 0 0 10px darkred;
-}
+    color: lightseagreen;
+    text-shadow: 0 0 5px slategrey, 0 0 10px lightseagreen;
 
-.logo .bottom-line {
+}
+.logo.bottom-line
+{
     display: block;
-    font-size: 52px;
+    font-size: 54px;
     letter-spacing: 6px;
     font-weight: 800;
-    color: darkred;
+    color: lightseagreen ;
     margin-top: 5px;
 }
-
-
-body.homepage .logo .top-line {
-    color: #ffcccc;
+body.homepage.logo.top-line
+{
+    color:rgba(255,204,204,0.5);
     text-shadow: 2px 2px 8px black;
+
+
 }
-
-body.homepage .logo .bottom-line {
-    color: #ffcccc;
-    text-shadow: 2px 2px 8px black;
-}
-
-
-nav {
+nav
+{
     text-align: center;
     margin: 20px 0;
-    padding: 15px 0;
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    background-color: white;
+    padding: 20px 0;
+    border-top:1px lightgrey;
+    border-bottom: 1px lightgray;
+    background-color:white;
 }
-
-nav a {
+nav a
+{
     color: black;
     margin: 0 20px;
     text-decoration: none;
@@ -92,146 +90,126 @@ nav a {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    transition: color 0.3s ease;
-}
+    transition: color 0.3 ease;
 
-nav a:hover {
+}
+nav a :hover
+{
     color: firebrick;
-}
 
-/* Homepage navigation */
-body.homepage nav {
-    background: rgba(0, 0, 0, 0.5);
-    border-top: 1px solid rgba(255,255,255,0.3);
-    border-bottom: 1px solid rgba(255,255,255,0.3);
 }
-
-body.homepage nav a {
-    color: white;
+/*Homepage navigation*/
+body.homepage nav
+{
+    background: rgba(0,0,0,0.5);
+    border-top: 1 px solid rgba(255,255,255,0.3);
+    border-bottom: 1 px solid rgba(255,255,255,0.3);
 }
-
-body.homepage nav a:hover {
+body.homepage nav a :hover
+{
     color: firebrick;
-}
 
-/* Hero Section */
-.hero {
+}
+.hero
+{
     position: relative;
     margin-bottom: 40px;
-}
 
-.main-img {
+}
+.main-img
+{
     width: 100%;
     height: 500px;
     object-fit: cover;
-}
 
-.overlay-text {
-    position: absolute;
+}
+.overlay-text
+{
+    position:absolute;
     top: 50%;
     left: 5%;
-    transform: translateY(-50%);
+    transform: translate(-50%);
     font-size: 60px;
     font-weight: 800;
     color: beige;
     text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
     letter-spacing: 3px;
     line-height: 1.2;
+
 }
 
-/* Product Grid */
-.grid {
+/*Product Grid*/
+.grid
+{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    max-width: 1200px;
+    max-width:1500px;
     margin: 0 auto;
-}
 
-.grid img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    border-radius: 4px;
 }
-
-.grid img:hover {
-    transform: scale(1.02);
-}
-
-/* Headers */
-h2 {
+.grid img:hover
+{
     text-align: center;
     font-size: 36px;
     margin: 40px 0 20px 0;
     letter-spacing: 2px;
 }
-
 body.homepage h2,
-body.homepage .section-title {
+body.homepage.section-title
+{
     color: white;
     text-shadow: 2px 2px 5px black;
-}
 
-/* Content Containers */
-.about-text, .shop-text, .gallery-text, .contact-info {
+}
+.about-text,.shop-text.contact-info
+{
     max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
+    margin:30px auto;
+    padding: 30px;
     text-align: center;
     background: beige;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
-
-p {
+p 
+{
     font-size: 18px;
-    color: dimgray;
+    color:dimgray;
     line-height: 1.8;
-}
 
-body.homepage p {
+}
+bod.homepage p 
+{
     color: #ddd;
 }
-
-/* Form */
-form {
-    max-width: 600px;
-    margin: 30px auto;
-    padding: 30px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+form
+{
+max-width: 600px;
+margin: 30px auto ;
+padding: 30px;
+background: white;
+border-radius: 8px;
+box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
-
-input, textarea {
+input,textarea
+{
     width: 100%;
     padding: 12px;
     margin: 10px 0 20px 0;
     border: 1px solid lightgray;
     border-radius: 4px;
     font-size: 16px;
-}
-
-button {
-    background-color: black;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
-button:hover {
+button:hover
+{
     background-color: firebrick;
 }
-
-/* Footer */
-footer {
+footer
+{
     text-align: center;
     padding: 30px;
     background-color: black;
@@ -239,106 +217,102 @@ footer {
     margin-top: 50px;
 }
 
-body.homepage footer {
-    background: rgba(0, 0, 0, 0.6);
+body.homepage footer
+{
+    background: rgba(0,0,0,0.5);
 }
-
-/* Section Title */
-.section-title {
+.section-title
+{
     text-align: center;
     font-size: 40px;
-    margin: 50px 0 25px;
+    margin:50px 0 25px;
     letter-spacing: 2px;
-}
 
-/* Fullscreen Hero (for other pages if needed) */
-.hero-fullscreen {
+}
+.hero-fullscreen
+{
     height: 100vh;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
-.hero-overlay {
-    position: absolute;
+.hero-overlay
+{
+    position:absolute;
     bottom: 20%;
-    left: 10%;
+    left:10%;
     background: rgba(0,0,0,0.7);
     padding: 30px 50px;
     border-radius: 8px;
     text-align: center;
 }
-
-.hero-overlay h2 {
-    color: white;
-    font-size: 20px;
-    margin: 15px 0;
-}
-
-.hero-overlay p {
-    color: white;
-    font-size: 20px;
-    margin: 15px 0;
-}
-
-.hero-btn {
+.hero-btn
+{
     display: inline-block;
     background: firebrick;
     color: white;
     padding: 12px 30px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight:bold;
     border-radius: 4px;
     transition: background 0.3s;
-}
 
-.hero-btn:hover {
+}
+.hero-btn:hover
+{
     background: black;
 }
+@media(max-width:770px)
+{
+    .logo
+    {
+        font-size:34px ;
+    }
+    .logo.top-line
+    {
+font-size: 40px;
+    }
+    .logo.bottom-line
+    {
+font-size: 22px;
+    }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .logo {
-        font-size: 32px;
-    }
-    
-    .logo .top-line {
-        font-size: 36px;
-    }
-    
-    .logo .bottom-line {
-        font-size: 20px;
-    }
-    
-    nav a {
-        display: inline-block;
-        margin: 5px 10px;
-        font-size: 12px;
-    }
-    
-    .overlay-text {
-        font-size: 30px;
-        left: 5%;
-    }
-    
-    .main-img {
-        height: 300px;
-    }
-    
-    h2 {
-        font-size: 28px;
-    }
-    
-    .grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
+nav a 
+{
+    display:inline-block;
+    margin:5px 10px;
+    font-size:12px;
+}
+.overlay-text
+{
+    font-size: 30px;
+    left:5%
+}
+.main-img
+{
+    height: 300px;
+
+}
+h2
+{
+    font-size: 28px;
+
+}
+.grid
+{
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
 }
 
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
+}
+@media(max-width:480px)
+{
+    .grid
+    {
+grid-template-columns: 1fr;
     }
 }
 
