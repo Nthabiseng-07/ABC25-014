@@ -174,25 +174,76 @@ body.homepage nav a:hover {
 .hero {
     position: relative;
     margin-bottom: 40px;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    text-align: center;
+    overflow: hidden;
 }
 
-.main-img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.overlay-text {
+.hero::before {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translateY(-50%);
-    font-size: 60px;
-    font-weight: 800;
-    color: beige;
-    text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.15) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: slideUp 0.8s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-size: 52px;
+    font-weight: 900;
+    color: #fff;
     letter-spacing: 3px;
+    margin: 0 0 15px 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: #ddd;
+    margin: 0 0 30px 0;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #dc143c, #ff6347);
+    color: white;
+    padding: 15px 45px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(220, 20, 60, 0.3);
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(220, 20, 60, 0.5);
+    background: linear-gradient(135deg, #ff6347, #dc143c);
 }
 
 /* Product Grid */
@@ -217,6 +268,57 @@ body.homepage nav a:hover {
     transform: scale(1.02);
 }
 
+/* Product Showcase */
+.product-showcase {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.featured-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(220, 20, 60, 0.25);
+}
+
+.product-image-box {
+    background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.featured-item h3 {
+    margin: 15px 15px 10px 15px;
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+}
+
+.product-price {
+    color: #dc143c;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 15px 15px 15px;
+    padding-bottom: 15px;
+}
+
 /* Headers */
 h2 {
     text-align: center;
@@ -229,6 +331,46 @@ body.homepage h2,
 body.homepage .section-title {
     color: white;
     text-shadow: 2px 2px 5px black;
+}
+
+/* Info Section */
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
+    border-radius: 12px;
+}
+
+.info-box {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid #dc143c;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(220, 20, 60, 0.15);
+}
+
+.info-box h3 {
+    font-size: 20px;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.info-box p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
 }
 
 /* Content Containers */
@@ -289,14 +431,22 @@ button:hover {
 /* Footer */
 footer {
     text-align: center;
-    padding: 30px;
-    background-color: black;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
     color: white;
-    margin-top: 50px;
+    margin-top: 60px;
+    border-top: 3px solid #dc143c;
+}
+
+footer p {
+    color: #ccc;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0;
 }
 
 body.homepage footer {
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(13, 13, 13, 0.85);
 }
 
 /* Section Title */
@@ -305,6 +455,27 @@ body.homepage footer {
     font-size: 40px;
     margin: 50px 0 25px;
     letter-spacing: 2px;
+    font-weight: 900;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 20px 0;
+    color: #1a1a1a;
+}
+
+.section-title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #dc143c, transparent);
+}
+
+body.homepage .section-title {
+    color: white;
 }
 
 /* Fullscreen Hero (for other pages if needed) */
@@ -373,13 +544,24 @@ body.homepage footer {
         font-size: 12px;
     }
     
-    .overlay-text {
-        font-size: 30px;
-        left: 5%;
+    .hero-title {
+        font-size: 36px;
+        letter-spacing: 2px;
     }
     
-    .main-img {
-        height: 300px;
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .product-showcase {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 30px 15px;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+        padding: 40px 15px;
     }
     
     h2 {
@@ -393,6 +575,42 @@ body.homepage footer {
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 50px 15px;
+    }
+    
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .hero-btn {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+    
+    .product-showcase {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+    
+    .info-section {
+        grid-template-columns: 1fr;
+        padding: 30px 10px;
+    }
+    
+    .featured-item h3 {
+        font-size: 16px;
+    }
+    
+    .product-price {
+        font-size: 20px;
+    }
+    
     .grid {
         grid-template-columns: 1fr;
     }
