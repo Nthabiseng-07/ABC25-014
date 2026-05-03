@@ -130,41 +130,8 @@ body.homepage::before {
 
 
 body:not(.homepage) {
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 25%, #f0f0f0 50%, #e8e8e8 75%, #f5f5f5 100%);
-    background-size: 400% 400%;
+    background-color: whitesmoke;
     color: black;
-    position: relative;
-}
-
-body:not(.homepage)::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        repeating-linear-gradient(
-            0deg,
-            rgba(255, 255, 255, 0.5) 0px,
-            rgba(255, 255, 255, 0.5) 2px,
-            transparent 2px,
-            transparent 4px
-        ),
-        repeating-linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.03) 0px,
-            rgba(0, 0, 0, 0.03) 1px,
-            transparent 1px,
-            transparent 2px
-        );
-    pointer-events: none;
-    z-index: 0;
-}
-
-body:not(.homepage) > * {
-    position: relative;
-    z-index: 1;
 }
 
 body {
