@@ -6,209 +6,289 @@
     <title>Shop - Urban Street Apparels | Premium Streetwear</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      /* Shop Page Specific Styles */
+      .shop-hero {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #dc143c 100%);
+        color: white;
+        padding: 70px 20px;
+        text-align: center;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .shop-hero h2 {
+        font-size: 2.8em;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        margin-bottom: 15px;
+      }
+
+      .shop-hero p {
+        font-size: 1.2em;
+        opacity: 0.95;
+      }
+
+      .shop-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .category-section {
+        margin: 80px 0;
+      }
+
+      .category-title {
+        font-size: 2.2em;
+        font-weight: 800;
+        text-align: center;
+        color: #1a1a1a;
+        margin-bottom: 40px;
+        position: relative;
+        padding-bottom: 20px;
+      }
+
+      .category-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #dc143c, #ff6347);
+        border-radius: 2px;
+      }
+
+      .product-name {
+        font-weight: 700 !important;
+        color: #1a1a1a !important;
+      }
+
+      @media (max-width: 768px) {
+        .shop-hero h2 {
+          font-size: 1.8em;
+        }
+
+        .category-title {
+          font-size: 1.6em;
+        }
+      }
+    </style>
 </head>
 <body>
-   
-     
-    <div id="divcontainer">
-        
     <h1 class="logo">URBAN STREET APPARELS</h1>
-    
+
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="shop.html">Shop</a>
-        
         <a href="contact.html">Contact</a>
         <a href="feedback.html">Feedback</a>
     </nav>
-    
-    <h2>SHOP OUR COLLECTION</h2>
-    <div class="shop-text">
-        <p>Premium quality streetwear. Fresh drops weekly.</p>
-    </div>
-        <h3>HOODIES</h3>
-        <div class="product-grid">
 
-            <div class="product-card">
-                <div class="product-image"><img src="images/hoodie 1.jpg" alt="Hoodie 1"></div>
-                <div class="product-info">
-                    <p class="product-name">Classic Hoodie</p>
-                    <p class="product-price">P169.99</p>
-                    <button class="shop-btn">Shop Now</button>
+    <!-- Shop Hero -->
+    <div class="shop-hero">
+        <div>
+            <h2>SHOP OUR COLLECTION</h2>
+            <p>Premium quality streetwear. Fresh drops weekly.</p>
+        </div>
+    </div>
+
+    <div class="shop-container">
+        <!-- Hoodies Section -->
+        <div class="category-section">
+            <h3 class="category-title">HOODIES</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/hoodie 1.jpg" alt="Classic Hoodie"></div>
+                    <div class="product-info">
+                        <p class="product-name">Classic Hoodie</p>
+                        <p class="product-price">P169.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/hoodie 2.jpg" alt="Streetwear Hoodie"></div>
+                    <div class="product-info">
+                        <p class="product-name">Streetwear Hoodie</p>
+                        <p class="product-price">P164.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/hoodie 3.jpg" alt="Urban Hoodie"></div>
+                    <div class="product-info">
+                        <p class="product-name">Urban Hoodie</p>
+                        <p class="product-price">P169.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/hoodie 4.jpg" alt="Premium Hoodie"></div>
+                    <div class="product-info">
+                        <p class="product-name">Premium Hoodie</p>
+                        <p class="product-price">P174.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/hoodie 5.jpg" alt="Elite Hoodie"></div>
+                    <div class="product-info">
+                        <p class="product-name">Elite Hoodie</p>
+                        <p class="product-price">P179.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
                 </div>
             </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/hoodie 2.jpg" alt="Hoodie 2"></div>
-            <div class="product-info">
-                <p class="product-name">Streetwear Hoodie</p>
-                <p class="product-price">P164.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/hoodie 3.jpg" alt="Hoodie 3"></div>
-            <div class="product-info">
-                <p class="product-name">Urban Hoodie</p>
-                <p class="product-price">P169.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/hoodie 4.jpg" alt="Hoodie 4"></div>
-            <div class="product-info">
-                <p class="product-name">Premium Hoodie</p>
-                <p class="product-price">P174.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/hoodie 5.jpg" alt="Hoodie 5"></div>
-            <div class="product-info">
-                <p class="product-name">Elite Hoodie</p>
-                <p class="product-price">P179.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        </div>
-          <h3>SWEATSHIRTS</h3>
-        <div class="product-grid">
-
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatshirt 1.jpg" alt="Sweatshirt 1"></div>
-            <div class="product-info">
-                <p class="product-name">Classic Sweatshirt</p>
-                <p class="product-price">P129.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatshirt 2.jpg" alt="Sweatshirt 2"></div>
-            <div class="product-info">
-                <p class="product-name">Urban Sweatshirt</p>
-                <p class="product-price">P129.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatshirt 3.jpg" alt="Sweatshirt 3"></div>
-            <div class="product-info">
-                <p class="product-name">Streetwear Sweatshirt</p>
-                <p class="product-price">P99.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatshirt 4.jpg" alt="Sweatshirt 4"></div>
-            <div class="product-info">
-                <p class="product-name">Premium Sweatshirt</p>
-                <p class="product-price">P99.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatshirt 5.jpg" alt="Sweatshirt 5"></div>
-            <div class="product-info">
-                <p class="product-name">Elite Sweatshirt</p>
-                <p class="product-price">P99.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        </div>
-          <h3>GRAPHIC TEES</h3>
-        <div class="product-grid">
-   
-        <div class="product-card">
-            <div class="product-image"><img src="images/graphic tee 1.jpg" alt="Tee 1"></div>
-            <div class="product-info">
-                <p class="product-name">Graphic Tee 1</p>
-                <p class="product-price">P129.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/graphic tee 2.jpg" alt="Tee 2"></div>
-            <div class="product-info">
-                <p class="product-name">Graphic Tee 2</p>
-                <p class="product-price">P132.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/graphic tee 3.jpg" alt="Tee 3"></div>
-            <div class="product-info">
-                <p class="product-name">Graphic Tee 3</p>
-                <p class="product-price">P134.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/graphic tee 4.com_e__mrBzbjr" alt="Tee 4"></div>
-            <div class="product-info">
-                <p class="product-name">Graphic Tee 4</p>
-                <p class="product-price">P129.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/graphic tee 5.jpg" alt="Tee 5"></div>
-            <div class="product-info">
-                <p class="product-name">Graphic Tee 5</p>
-                <p class="product-price">P149.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
         </div>
 
-        <h3>SWEATPANTS</h3>
-        <div class="product-grid">
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatpants 1.jpg" alt="Sweatpants 1"></div>
-            <div class="product-info">
-                <p class="product-name">Classic Sweatpants</p>
-                <p class="product-price">P149.99</p>
-                <button class="shop-btn">Shop Now</button>
+        <!-- Sweatshirts Section -->
+        <div class="category-section">
+            <h3 class="category-title">SWEATSHIRTS</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatshirt 1.jpg" alt="Classic Sweatshirt"></div>
+                    <div class="product-info">
+                        <p class="product-name">Classic Sweatshirt</p>
+                        <p class="product-price">P129.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatshirt 2.jpg" alt="Urban Sweatshirt"></div>
+                    <div class="product-info">
+                        <p class="product-name">Urban Sweatshirt</p>
+                        <p class="product-price">P129.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatshirt 3.jpg" alt="Streetwear Sweatshirt"></div>
+                    <div class="product-info">
+                        <p class="product-name">Streetwear Sweatshirt</p>
+                        <p class="product-price">P99.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatshirt 4.jpg" alt="Premium Sweatshirt"></div>
+                    <div class="product-info">
+                        <p class="product-name">Premium Sweatshirt</p>
+                        <p class="product-price">P99.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatshirt 5.jpg" alt="Elite Sweatshirt"></div>
+                    <div class="product-info">
+                        <p class="product-name">Elite Sweatshirt</p>
+                        <p class="product-price">P99.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatpants 2.jpg" alt="Sweatpants 2"></div>
-            <div class="product-info">
-                <p class="product-name">Urban Sweatpants</p>
-                <p class="product-price">P179.99</p>
-                <button class="shop-btn">Shop Now</button>
+
+        <!-- Graphic Tees Section -->
+        <div class="category-section">
+            <h3 class="category-title">GRAPHIC TEES</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/graphic tee 1.jpg" alt="Graphic Tee 1"></div>
+                    <div class="product-info">
+                        <p class="product-name">Graphic Tee 1</p>
+                        <p class="product-price">P129.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/graphic tee 2.jpg" alt="Graphic Tee 2"></div>
+                    <div class="product-info">
+                        <p class="product-name">Graphic Tee 2</p>
+                        <p class="product-price">P132.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/graphic tee 3.jpg" alt="Graphic Tee 3"></div>
+                    <div class="product-info">
+                        <p class="product-name">Graphic Tee 3</p>
+                        <p class="product-price">P134.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/graphic tee 4.com_e__mrBzbjr" alt="Graphic Tee 4"></div>
+                    <div class="product-info">
+                        <p class="product-name">Graphic Tee 4</p>
+                        <p class="product-price">P129.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/graphic tee 5.jpg" alt="Graphic Tee 5"></div>
+                    <div class="product-info">
+                        <p class="product-name">Graphic Tee 5</p>
+                        <p class="product-price">P149.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatpants 3.jpg" alt="Sweatpants 3"></div>
-            <div class="product-info">
-                <p class="product-name">Streetwear Sweatpants</p>
-                <p class="product-price">P149.99</p>
-                <button class="shop-btn">Shop Now</button>
+
+        <!-- Sweatpants Section -->
+        <div class="category-section">
+            <h3 class="category-title">SWEATPANTS</h3>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatpants 1.jpg" alt="Classic Sweatpants"></div>
+                    <div class="product-info">
+                        <p class="product-name">Classic Sweatpants</p>
+                        <p class="product-price">P149.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatpants 2.jpg" alt="Urban Sweatpants"></div>
+                    <div class="product-info">
+                        <p class="product-name">Urban Sweatpants</p>
+                        <p class="product-price">P179.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatpants 3.jpg" alt="Streetwear Sweatpants"></div>
+                    <div class="product-info">
+                        <p class="product-name">Streetwear Sweatpants</p>
+                        <p class="product-price">P149.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatpants 4.jpg" alt="Premium Sweatpants"></div>
+                    <div class="product-info">
+                        <p class="product-name">Premium Sweatpants</p>
+                        <p class="product-price">P195.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"><img src="images/sweatpants 5.jpg" alt="Elite Sweatpants"></div>
+                    <div class="product-info">
+                        <p class="product-name">Elite Sweatpants</p>
+                        <p class="product-price">P195.99</p>
+                        <button class="shop-btn">Shop Now</button>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatpants 4.jpg" alt="Sweatpants 4"></div>
-            <div class="product-info">
-                <p class="product-name">Premium Sweatpants</p>
-                <p class="product-price">P195.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
-        <div class="product-card">
-            <div class="product-image"><img src="images/sweatpants 5.jpg" alt="Sweatpants 5"></div>
-            <div class="product-info">
-                <p class="product-name">Elite Sweatpants</p>
-                <p class="product-price">P195.99</p>
-                <button class="shop-btn">Shop Now</button>
-            </div>
-        </div>
         </div>
     </div>
 
-
-
-   
-
-  
+    <footer>
+        <p>&copy; 2026 Urban Street Apparels. All rights reserved. | Authentic Urban Fashion</p>
+    </footer>
 </body>
 </html>

@@ -6,98 +6,433 @@
     <title>About Urban Street Apparels | Our Story & Mission</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      /* About Page Specific Styles */
+      .about-hero {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #dc143c 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+        min-height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .about-hero h2 {
+        font-size: 3em;
+        font-weight: 900;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+        text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .about-hero p {
+        font-size: 1.3em;
+        opacity: 0.95;
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: 300;
+      }
+
+      .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      .about-section {
+        margin: 70px 0;
+      }
+
+      .about-section h3 {
+        font-size: 2.2em;
+        font-weight: 800;
+        color: #1a1a1a;
+        margin-bottom: 30px;
+        position: relative;
+        padding-bottom: 20px;
+      }
+
+      .about-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(90deg, #dc143c, #ff6347);
+        border-radius: 2px;
+      }
+
+      .about-section > p {
+        font-size: 1.1em;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        text-align: justify;
+      }
+
+      .mission-list {
+        list-style: none;
+        padding: 0;
+        margin: 30px 0;
+      }
+
+      .mission-list li {
+        background: white;
+        padding: 15px 25px;
+        margin-bottom: 15px;
+        border-left: 4px solid #dc143c;
+        border-radius: 5px;
+        font-size: 1.05em;
+        color: #333;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+
+      .mission-list li:hover {
+        transform: translateX(10px);
+        box-shadow: 0 5px 15px rgba(220, 20, 60, 0.2);
+      }
+
+      .mission-list li::before {
+        content: '✓ ';
+        color: #dc143c;
+        font-weight: 800;
+        margin-right: 10px;
+      }
+
+      .why-choose-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 30px;
+      }
+
+      .why-choose-item {
+        background: linear-gradient(135deg, #ffffff, #f9f9f9);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        border-top: 4px solid transparent;
+      }
+
+      .why-choose-item:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(220, 20, 60, 0.2);
+        border-top-color: #dc143c;
+      }
+
+      .why-choose-item h4 {
+        font-size: 1.3em;
+        color: #1a1a1a;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .why-choose-item p {
+        color: #666;
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+
+      .values-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .value-item {
+        background: white;
+        padding: 35px 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .value-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #dc143c, #ff6347);
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .value-item:hover::before {
+        transform: translateX(0);
+      }
+
+      .value-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(220, 20, 60, 0.15);
+      }
+
+      .value-item h4 {
+        font-size: 1.4em;
+        color: #dc143c;
+        margin-bottom: 12px;
+        font-weight: 800;
+      }
+
+      .value-item p {
+        color: #666;
+        font-size: 0.95em;
+        line-height: 1.6;
+      }
+
+      .community-section {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        color: white;
+        padding: 60px 30px;
+        border-radius: 15px;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .community-section h3 {
+        color: white;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .community-section h3::after {
+        background: linear-gradient(90deg, #ff6347, #dc143c);
+      }
+
+      .community-section p {
+        color: #e0e0e0;
+        font-size: 1.1em;
+        margin-bottom: 30px;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+      }
+
+      .social-icons a {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.3em;
+        transition: all 0.3s ease;
+      }
+
+      .social-icons a:hover {
+        background: #dc143c;
+        border-color: #dc143c;
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+      }
+
+      .newsletter-box {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 500px;
+        margin: 30px auto 0;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .newsletter-box input {
+        width: 100%;
+        padding: 12px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 8px;
+        font-size: 1em;
+        margin-bottom: 12px;
+        transition: all 0.3s ease;
+      }
+
+      .newsletter-box input:focus {
+        outline: none;
+        border-color: #dc143c;
+        box-shadow: 0 0 10px rgba(220, 20, 60, 0.2);
+      }
+
+      .newsletter-box button {
+        width: 100%;
+        background: linear-gradient(135deg, #dc143c, #ff6347);
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1em;
+      }
+
+      .newsletter-box button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(220, 20, 60, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .about-hero h2 {
+          font-size: 2em;
+        }
+
+        .about-section h3 {
+          font-size: 1.6em;
+        }
+
+        .why-choose-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .values-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
   </head>
   <body> 
     <h1 class="logo">URBAN STREET APPARELS</h1>
-   <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="shop.html">Shop</a>
-        <a href="contact.html">Contact</a>
-        <a href="feedback.html">Feedback</a>
-      </nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+    </nav>
   
-  <div class="about-container">
-    <h2>ABOUT URBAN STREET APPARELS</h2>
-    
-    <div class="about-section">
-      <h3>Our Story</h3>
-      <p>Founded in 2026, Urban Street Apparels was born from a passion for authentic streetwear culture. What started as a small local brand has evolved into a prestigious name in urban fashion. We serve customers worldwide who value self-expression, originality, and quality clothing that tells their story.</p>
-      <p>Our journey began in the heart of New York City, where we observed the need for authentic, high-quality streetwear that resonates with the urban lifestyle. Today, we're proud to be a trusted brand among streetwear enthusiasts and fashion-forward individuals.</p>
-    </div>
-
-    <div class="about-section">
-      <h3>Our Mission</h3>
-      <p>At Urban Street Apparels, our mission is to empower individuals through fashion. We believe that clothing is more than just fabric – it's a form of self-expression and cultural identity. We're committed to:</p>
-      <ul class="mission-list">
-        <li>Providing premium quality streetwear that lasts</li>
-        <li>Celebrating urban culture and individuality</li>
-        <li>Supporting sustainable and ethical fashion practices</li>
-        <li>Building a community of like-minded fashion enthusiasts</li>
-        <li>Constantly innovating with fresh designs and drops</li>
-      </ul>
-    </div>
-
-    <div class="about-section">
-      <h3>Why Choose Us?</h3>
-      <div class="why-choose-grid">
-        <div class="why-choose-item">
-          <h4>🎨 Authentic Design</h4>
-          <p>Our designs are inspired by real street culture, not trends. Every piece tells a story.</p>
-        </div>
-        <div class="why-choose-item">
-          <h4>💎 Premium Quality</h4>
-          <p>We use only the finest materials and manufacturing processes to ensure durability and comfort.</p>
-        </div>
-        <div class="why-choose-item">
-          <h4>🌍 Global Community</h4>
-          <p>Join thousands of streetwear enthusiasts from around the world who share our passion.</p>
-        </div>
-        <div class="why-choose-item">
-          <h4>🚀 Fresh Drops</h4>
-          <p>New collections every week to keep your wardrobe current and exciting.</p>
-        </div>
-        <div class="why-choose-item">
-          <h4>💚 Sustainability</h4>
-          <p>We're committed to ethical production and minimizing our environmental impact.</p>
-        </div>
-        <div class="why-choose-item">
-          <h4>⭐ Customer First</h4>
-          <p>Your satisfaction is our priority. Exceptional service, always.</p>
-        </div>
+    <!-- Hero Section -->
+    <div class="about-hero">
+      <div>
+        <h2>OUR STORY</h2>
+        <p>Authentic Streetwear, Authentic Culture, Authentic You</p>
       </div>
     </div>
 
-    <div class="about-section">
-      <h3>Our Values</h3>
-      <div class="values-container">
-        <div class="value-item">
-          <h4>Authenticity</h4>
-          <p>We stay true to the roots of street culture while pushing creative boundaries.</p>
-        </div>
-        <div class="value-item">
-          <h4>Quality</h4>
-          <p>Every stitch counts. We never compromise on quality or craftsmanship.</p>
-        </div>
-        <div class="value-item">
-          <h4>Community</h4>
-          <p>We believe in building connections and celebrating the diversity of our customers.</p>
-        </div>
-        <div class="value-item">
-          <h4>Innovation</h4>
-          <p>Constantly evolving our designs and staying ahead of the curve in fashion.</p>
+    <div class="about-container">
+      
+      <!-- Story Section -->
+      <div class="about-section">
+        <h3>Our Journey</h3>
+        <p>Founded in 2026, Urban Street Apparels was born from a passionate vision to revolutionize streetwear. What began as a small local brand in the heart of New York City has evolved into a prestigious global name in urban fashion. We serve customers worldwide who value self-expression, originality, and quality clothing that authentically represents their lifestyle.</p>
+        <p>Our journey reflects the evolution of street culture itself. We've witnessed how fashion becomes a language, how clothing tells stories, and how communities unite around shared values. Every piece we create carries this understanding—that fashion is never just about the fabric, it's about the culture, the movement, and the people who wear it.</p>
+      </div>
+
+      <!-- Mission Section -->
+      <div class="about-section">
+        <h3>Our Mission</h3>
+        <p>At Urban Street Apparels, our mission is to empower individuals through authentic fashion. We believe that clothing is more than just fabric—it's a form of self-expression, cultural identity, and a statement to the world. We're committed to:</p>
+        <ul class="mission-list">
+          <li>Providing premium quality streetwear that stands the test of time</li>
+          <li>Celebrating urban culture and championing individuality</li>
+          <li>Supporting sustainable and ethical fashion practices</li>
+          <li>Building a vibrant community of like-minded fashion enthusiasts</li>
+          <li>Constantly innovating with fresh designs and exclusive drops</li>
+        </ul>
+      </div>
+
+      <!-- Why Choose Us Section -->
+      <div class="about-section">
+        <h3>Why Choose Us</h3>
+        <div class="why-choose-grid">
+          <div class="why-choose-item">
+            <h4>🎨 Authentic Design</h4>
+            <p>Our designs are inspired by real street culture, not fleeting trends. Every piece tells a unique story rooted in urban authenticity.</p>
+          </div>
+          <div class="why-choose-item">
+            <h4>💎 Premium Quality</h4>
+            <p>We source only the finest materials and employ expert craftsmanship to ensure every item is durable, comfortable, and built to last.</p>
+          </div>
+          <div class="why-choose-item">
+            <h4>🌍 Global Community</h4>
+            <p>Join thousands of streetwear enthusiasts from around the world who share our passion for authentic urban fashion and culture.</p>
+          </div>
+          <div class="why-choose-item">
+            <h4>🚀 Fresh Drops Weekly</h4>
+            <p>Experience constant innovation with new collections released regularly to keep your wardrobe current and exciting.</p>
+          </div>
+          <div class="why-choose-item">
+            <h4>♻️ Sustainability First</h4>
+            <p>We're committed to ethical production practices and minimizing our environmental footprint for a better future.</p>
+          </div>
+          <div class="why-choose-item">
+            <h4>⭐ Customer Excellence</h4>
+            <p>Your satisfaction is our top priority with exceptional service, fast shipping, and dedicated customer support.</p>
+          </div>
         </div>
       </div>
+
+      <!-- Values Section -->
+      <div class="about-section">
+        <h3>Our Core Values</h3>
+        <div class="values-container">
+          <div class="value-item">
+            <h4>Authenticity</h4>
+            <p>We stay true to the roots of street culture while boldly pushing creative boundaries to deliver original designs.</p>
+          </div>
+          <div class="value-item">
+            <h4>Quality</h4>
+            <p>Every stitch counts. We maintain unwavering commitment to superior quality and meticulous craftsmanship in everything we create.</p>
+          </div>
+          <div class="value-item">
+            <h4>Community</h4>
+            <p>Building meaningful connections and celebrating the rich diversity of our global customer base drives everything we do.</p>
+          </div>
+          <div class="value-item">
+            <h4>Innovation</h4>
+            <p>Constantly evolving our designs and staying at the forefront of urban fashion trends shapes our creative vision.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Section -->
+      <div class="community-section">
+        <h3>Join Our Community</h3>
+        <p>Become part of the Urban Street Apparels family and experience exclusive benefits, early access to new drops, and connect with fellow streetwear enthusiasts worldwide.</p>
+        
+        <div class="newsletter-box">
+          <input type="email" placeholder="Enter your email address" required>
+          <button type="submit">Subscribe Now</button>
+        </div>
+
+        <div class="social-icons">
+          <a href="https://www.instagram.com/urbanstreetapparels_bw" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.twitter.com/urbanstreetapparels_bw" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://www.facebook.com/urbanstreetapparels_bw" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://www.tiktok.com/@urbanstreetapparels_bw" target="_blank" title="TikTok">
+            <i class="fab fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+
     </div>
 
-    <div class="about-section">
-      <h3>Join Our Community</h3>
-      <p>Become part of the Urban Street Apparels family. Subscribe to our newsletter for exclusive drops and updates, and connect with fellow streetwear enthusiasts.</p>
-      <div class="social-icons">
-        <a href="https://www.instagram.com/urbanstreetapparels_bw" target="_blank" title="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.twitter.com/urbanstreetapparels_bw" target="_blank" title="Twitter">
+    <footer>
+      <p>&copy; 2026 Urban Street Apparels. All rights reserved. | Authentic Urban Fashion</p>
+    </footer>
+  </body>
           <i class="fab fa-twitter"></i>
         </a>
         <a href="https://www.facebook.com/urbanstreetapparels.bw" target="_blank" title="Facebook">
