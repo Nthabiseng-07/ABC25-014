@@ -344,12 +344,6 @@ footer p {
         font-size: 0.85em;
     }
 }
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-   
-}
 
 body.homepage::before {
     content: "";
