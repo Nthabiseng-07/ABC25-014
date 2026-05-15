@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Urban Street Apparels</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    /* FAQ Page Specific Styles */
+    .faq-hero {
+      background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 25%, #dc143c 75%, #ff6347 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .faq-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(220, 20, 60, 0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 80%, rgba(255, 99, 71, 0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .faq-hero > div {
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .faq-hero h1 {
+      font-size: 4em;
+      font-weight: 900;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      text-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      animation: slideDown 0.8s ease-out;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .faq-hero p {
+      font-size: 1.4em;
+      opacity: 0.95;
+      max-width: 700px;
+      margin: 0 auto;
+      font-weight: 300;
+      animation: fadeIn 1s ease-out 0.2s backwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .faq-container {
+      max-width: 950px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .faq-section {
+      margin-bottom: 70px;
+      animation: fadeInUp 0.6s ease-out backwards;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .faq-section-title {
+      font-size: 2.2em;
+      font-weight: 800;
+      color: var(--primary-color);
+      margin-bottom: 40px;
+      position: relative;
+      padding-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .faq-section-title::before {
+      content: '';
+      width: 5px;
+      height: 35px;
+      background: linear-gradient(180deg, var(--accent-color) 0%, var(--accent-light) 100%);
+      border-radius: 3px;
+    }
+
+    .faq-section-title::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-color) 0%, transparent 100%);
+    }
+
+    .faq-item {
+      margin-bottom: 18px;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 2px solid transparent;
+      transform: translateY(0);
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 12px 35px rgba(220, 20, 60, 0.15);
+      transform: translateY(-4px);
+      border-color: var(--accent-color);
+    }
+
+    .faq-item.active {
+      box-shadow: 0 12px 35px rgba(220, 20, 60, 0.2);
+      border-color: var(--accent-color);
+    }
+
+    .faq-question {
+      padding: 25px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      color: var(--primary-color);
+      background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+      transition: all 0.3s ease;
+      font-size: 1.05em;
+      letter-spacing: 0.3px;
+    }
+
+    .faq-question:hover {
+      background: linear-gradient(135deg, #f5f5f5 0%, #efefef 100%);
+    }
+
+    .faq-item.active .faq-question {
+      background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+      color: white;
+    }
+
+    .faq-question span {
+      flex: 1;
+      text-align: left;
+    }
+
+    .faq-icon {
+      color: var(--accent-color);
+      font-size: 1.4em;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-left: 20px;
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(180deg);
+      color: white;
+    }
+
+    .faq-answer {
+      padding: 0 25px;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #444;
+      line-height: 1.9;
+      font-size: 1.01em;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 25px;
+      max-height: 600px;
+      background: #fafafa;
+    }
+
+    .faq-answer p {
+      margin: 0;
+    }
+
+    .faq-support-box {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 100%);
+      padding: 50px 30px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 0.8s ease-out backwards;
+      margin-top: 80px;
+    }
+
+    .faq-support-box p {
+      color: white;
+      font-size: 1.3em;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    .faq-support-box a {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-color), var(--accent-light));
+      color: white;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 700;
+      transition: all 0.4s ease;
+      box-shadow: 0 6px 20px rgba(220, 20, 60, 0.3);
+      letter-spacing: 1px;
+      font-size: 1.05em;
+    }
+
+    .faq-support-box a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(220, 20, 60, 0.5);
+    }
+
+    footer {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #0f0f0f 100%);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 100px;
+      border-top: 3px solid var(--accent-color);
+    }
+
+    footer p {
+      margin: 10px 0;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    footer p:first-child {
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    footer p:last-child {
+      opacity: 0.8;
+      font-size: 0.95em;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .faq-hero h1 {
+        font-size: 2.5em;
+      }
+
+      .faq-hero p {
+        font-size: 1.1em;
+      }
+
+      .faq-section-title {
+        font-size: 1.6em;
+      }
+
+      .faq-question {
+        padding: 18px;
+        font-size: 1em;
+      }
+
+      .faq-answer {
+        padding: 0 18px;
+      }
+
+      .faq-item.active .faq-answer {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="logo">
+    <span class="top-line">URBAN STREET</span>
+    <span class="bottom-line">APPARELS</span>
+  </h1>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+    <a href="faq.html">FAQ</a>
+    <a href="feedback.html">Feedback</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="faq-hero">
+    <div>
+      <h1>FAQ</h1>
+      <p>Your Questions Answered ✦ Everything You Need to Know About Urban Street Apparels</p>
+    </div>
+  </section>
+
+  <div class="faq-container">
+    <!-- Shipping & Delivery Section -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">Shipping & Delivery</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How long does shipping take?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer standard shipping (5-7 business days) and express shipping (2-3 business days). Delivery times start from the order processing date, which is typically 1 business day. Weekend and holiday delays may apply.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you ship internationally?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, we ship to over 50 countries worldwide. International shipping typically takes 10-15 business days. Customs fees and import duties may apply depending on your country.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I track my order?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! You'll receive a tracking number via email once your order ships. You can use this number to track your package in real-time on the carrier's website.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sizing & Fit Section -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">Sizing & Fit</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I know what size to order?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Check our detailed size chart on each product page. Our streetwear collection runs true to size, though some vintage-inspired pieces have a relaxed fit. Customer reviews also include sizing feedback.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I exchange an item for a different size?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Absolutely! If you receive the wrong size, contact our customer service within 30 days. We'll arrange a free size exchange. Just keep the item unworn with original tags.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Returns & Refunds Section -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">Returns & Refunds</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is your return policy?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We offer a 30-day return policy. Items must be unworn, unwashed, with original tags attached, and in original packaging. Sale items and clearance products are final sale.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I start a return?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Log into your account and go to "My Orders". Select the item you want to return and click "Request Return". Print the prepaid shipping label and drop off your package at any shipping location. Your refund will be processed 5-7 days after we receive it.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Will I be charged for return shipping?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>No! We provide a free prepaid shipping label for all returns (except final sale items). Simply use the label we provide to return your item.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Care Section -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">Product Care</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How do I care for my graphic tees?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Wash in cold water (inside out for graphic prints), use mild detergent, and avoid bleach. Tumble dry on low heat or air dry for best results. This helps preserve the color and graphic quality of your apparel.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Will the graphics fade or crack?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Our high-quality graphics are designed to last for years with proper care. Follow our washing instructions to minimize fading. Any defects due to manufacturing will be covered under our quality guarantee.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Orders & Payments Section -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">Orders & Payments</h2>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What payment methods do you accept?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>We accept all major credit cards (Visa, Mastercard, American Express), digital wallets (Apple Pay, Google Pay), and bank transfers. All transactions are secure and encrypted.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Can I cancel my order?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>If your order hasn't shipped yet, you can cancel it within 24 hours. Contact our customer service immediately with your order number. Orders already in transit cannot be cancelled.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you offer gift cards?</span>
+          <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Yes! Digital and physical gift cards are available in various denominations. They never expire and can be used on any product in our shop.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Support Section -->
+    <section class="faq-section">
+      <h2 class="faq-section-title">Still Need Help?</h2>
+      <div class="faq-support-box">
+        <p>Can't find what you're looking for? Our team is here to help!</p>
+        <a href="contact.html">Get In Touch With Us</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Urban Street Apparels. All rights reserved.</p>
+    <p>Authentic Streetwear for the Bold</p>
+  </footer>
+
+  <script>
+    // FAQ Accordion Functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        faqItem.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
