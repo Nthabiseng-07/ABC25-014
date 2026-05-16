@@ -171,14 +171,31 @@
 <body>
   <h1 class="logo">URBAN STREET APPARELS</h1>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
-    <a href="faq.html">Help</a>
-    <a href="feedback.html">Feedback</a>
+  <nav class="navbar">
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="shop.html">Shop</a>
+      <a href="contact.html">Contact</a>
+      <a href="faq.html">Help</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
   </nav>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+      });
+    });
+  </script>
 
   <div class="feedback-hero">
     <div>

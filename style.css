@@ -46,17 +46,40 @@ h1.logo span.bottom-line {
     line-height: 1.2;
 }
 
-nav {
+nav.navbar {
     background: white;
     padding: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 0;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 100;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 15px 20px;
+    transition: color 0.3s ease;
+}
+
+.hamburger:hover {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
 }
 
 nav a {
@@ -661,6 +684,33 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #e0e0e0;
+        width: 100%;
+        text-align: left;
+    }
+
     h1.logo {
         font-size: 1.8em;
         padding: 25px 15px;
