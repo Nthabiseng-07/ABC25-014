@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feedback - Urban Street Apparels | Share Your Experience</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
@@ -169,33 +171,26 @@
   </style>
 </head>
 <body>
-  <h1 class="logo">URBAN STREET APPARELS</h1>
-
-  <nav class="navbar">
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="shop.html">Shop</a>
-      <a href="contact.html">Contact</a>
-      <a href="faq.html">Help</a>
-      <a href="feedback.html">Feedback</a>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #dc143c 100%);">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold fs-5" href="index.html">
+        <span style="color: white;">URBAN STREET</span><br><span style="color: #ff6347;">APPARELS</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">Help</a></li>
+          <li class="nav-item"><a class="nav-link active" href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('navLinks');
-    hamburger.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
-    });
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-      });
-    });
-  </script>
 
   <div class="feedback-hero">
     <div>
@@ -205,21 +200,21 @@
   </div>
 
   <div class="feedback-container">
-    <div class="feedback-form-wrapper">
+    <div class="container py-5">
       <form class="feedback-form">
-        <div class="form-group">
-          <label for="name">Full Name *</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name *</label>
+          <input type="text" class="form-control" id="name" name="name" required placeholder="Enter your full name">
         </div>
 
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required placeholder="Enter your email">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address *</label>
+          <input type="email" class="form-control" id="email" name="email" required placeholder="Enter your email">
         </div>
 
-        <div class="form-group">
-          <label for="rating">How Would You Rate Us? *</label>
-          <select id="rating" name="rating" required>
+        <div class="mb-3">
+          <label for="rating" class="form-label">How Would You Rate Us? *</label>
+          <select class="form-select" id="rating" name="rating" required>
             <option value="">Select a rating</option>
             <option value="5">⭐⭐⭐⭐⭐ Excellent - Outstanding Experience!</option>
             <option value="4">⭐⭐⭐⭐ Very Good - Really Impressed</option>
@@ -229,9 +224,9 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="category">Feedback Category *</label>
-          <select id="category" name="category" required>
+        <div class="mb-3">
+          <label for="category" class="form-label">Feedback Category *</label>
+          <select class="form-select" id="category" name="category" required>
             <option value="">Select a category</option>
             <option value="product">Product Quality & Design</option>
             <option value="service">Customer Service</option>
@@ -242,12 +237,12 @@
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="message">Your Feedback *</label>
-          <textarea id="message" name="message" required placeholder="Tell us what you think. Your feedback is invaluable to us..."></textarea>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your Feedback *</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required placeholder="Tell us what you think. Your feedback is invaluable to us..."></textarea>
         </div>
 
-        <button type="submit" class="feedback-submit-btn">Submit Feedback</button>
+        <button type="submit" class="btn btn-danger btn-lg w-100">Submit Feedback</button>
       </form>
     </div>
 
@@ -273,5 +268,7 @@
   <footer>
     <p>&copy; 2026 Urban Street Apparels. All rights reserved. | Authentic Urban Fashion</p>
   </footer>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
