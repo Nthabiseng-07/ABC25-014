@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ==================== HEADER & NAVIGATION ==================== */
+/* HEADER & NAVIGATION */
 h1.logo {
     color: white;
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #dc143c 100%);
@@ -96,7 +96,7 @@ nav a:hover {
     background: #f5f5f5;
 }
 
-/* ==================== HERO SECTION ==================== */
+/* HERO SECTION */
 section.hero {
     background: linear-gradient(135deg, rgba(26, 26, 26, 0.75) 0%, rgba(45, 45, 45, 0.75) 50%, rgba(220, 20, 60, 0.75) 100%), 
                 url('images/streetwear-person.jpg');
@@ -153,7 +153,7 @@ section.hero {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* ==================== SECTION STYLING ==================== */
+/* SECTION STYLING*/
 .section-title {
     font-size: 1.8em;
     font-weight: 900;
@@ -173,7 +173,7 @@ section.hero {
     border-radius: 2px;
 }
 
-/* ==================== PRODUCT GRID ==================== */
+/* PRODUCT GRID */
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -368,12 +368,12 @@ section.hero {
     transform: scale(0.98);
 }
 
-/* ==================== FEATURED ITEMS ==================== */
+/* FEATURED ITEMS*/
 .featured-item {
     transition: all 0.4s ease;
 }
 
-/* ==================== INFO SECTION ==================== */
+/*  INFO SECTION */
 .info-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -433,7 +433,7 @@ section.hero {
     line-height: 1.8;
 }
 
-/* ==================== TESTIMONIALS SECTION ==================== */
+/* TESTIMONIALS SECTION  */
 .testimonials-section {
     padding: 80px 20px;
     background: white;
@@ -483,7 +483,7 @@ section.hero {
     font-size: 0.9em;
 }
 
-/* ==================== NEWSLETTER SECTION ==================== */
+/* NEWSLETTER SECTION */
 .newsletter-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 50%, var(--accent-color) 100%);
     color: white;
@@ -544,7 +544,7 @@ section.hero {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* ==================== FOOTER ==================== */
+/* FOOTER */
 footer {
     background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
     color: white;
@@ -574,7 +574,7 @@ footer {
     opacity: 0.8;
 }
 
-/* ==================== RESPONSIVE DESIGN ==================== */
+/* RESPONSIVE DESIGN  */
 @media (max-width: 1024px) {
     h1.logo {
         font-size: 2.3em;
