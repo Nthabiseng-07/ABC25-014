@@ -1,4 +1,4 @@
-/* ==================== GLOBAL STYLES ==================== */
+/* GLOBAL STYLES  */
 * {
     margin: 0;
     padding: 0;
@@ -1188,7 +1188,7 @@ form button[type="submit"]:hover {
     margin: 20px 0;
 }
 
-/* ==================== COMPACT CARD STYLING ==================== */
+/*  COMPACT CARD STYLING */
 .card {
     display: flex;
     flex-direction: column;
