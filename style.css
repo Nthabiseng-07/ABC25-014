@@ -45,7 +45,6 @@ h1.logo span.bottom-line {
     display: block;
     line-height: 1.2;
 }
-
 nav.navbar {
     background: white;
     padding: 0;
@@ -779,25 +778,21 @@ footer {
     .newsletter-form {
         flex-direction: column;
     }
-
     .newsletter-form input,
     .newsletter-btn {
         width: 100%;
         min-width: auto;
     }
-
     .payment-methods {
         flex-direction: column;
     }
 }
-
 .product-image-box {
     font-size: 16px;
     letter-spacing: 1.5px;
     position: relative;
     overflow: hidden;
 }
-
 .product-image-box::before {
     content: "";
     position: absolute;
@@ -1254,7 +1249,6 @@ form button[type="submit"]:hover {
     line-height: 1.6;
     margin: 0;
 }
-
 .values-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1366,8 +1360,6 @@ form button[type="submit"]:hover {
     
     .product-price {
         font-size: 20px;
-        
-
     }
     
     .grid {
