@@ -378,19 +378,16 @@ section.hero {
     font-weight: 800;
     letter-spacing: 0.5px;
 }
-
 .info-box p {
     color: #666;
     font-size: 1em;
     line-height: 1.8;
 }
-
 /* TESTIMONIALS SECTION  */
 .testimonials-section {
     padding: 80px 20px;
     background: white;
 }
-
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -398,7 +395,6 @@ section.hero {
     max-width: 1300px;
     margin: 0 auto;
 }
-
 .testimonial-card {
     background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
     padding: 35px;
@@ -407,19 +403,16 @@ section.hero {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .testimonial-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 40px rgba(220, 20, 60, 0.15);
 }
-
 .testimonial-card .stars {
     color: #ffc107;
     font-size: 1.2em;
     margin-bottom: 15px;
     letter-spacing: 2px;
 }
-
 .testimonial-text {
     font-size: 0.95em;
     color: #666;
@@ -427,14 +420,12 @@ section.hero {
     margin: 15px 0;
     line-height: 1.6;
 }
-
 .testimonial-author {
     font-weight: 700;
     color: var(--primary-color);
     margin-top: 15px;
     font-size: 0.9em;
 }
-
 /* NEWSLETTER SECTION */
 .newsletter-section {
     background: linear-gradient(135deg, var(--primary-color) 0%, #2d2d2d 50%, var(--accent-color) 100%);
@@ -442,14 +433,12 @@ section.hero {
     padding: 80px 20px;
     text-align: center;
 }
-
 .newsletter-section h2 {
     font-size: 2.5em;
     font-weight: 900;
     margin-bottom: 15px;
     letter-spacing: 2px;
 }
-
 .newsletter-section p {
     font-size: 1.1em;
     margin-bottom: 35px;
@@ -475,7 +464,6 @@ section.hero {
     font-size: 1em;
     font-family: 'Poppins', sans-serif;
 }
-
 .newsletter-btn {
     background: white;
     color: var(--accent-color);
@@ -488,12 +476,10 @@ section.hero {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
 .newsletter-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-
 /* FOOTER */
 footer {
     background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
@@ -502,7 +488,6 @@ footer {
     margin-top: 20px;
     border-top: 2px solid rgba(220, 20, 60, 0.2);
 }
-
 .footer-bottom {
     padding: 0;
     text-align: center;
@@ -513,54 +498,43 @@ footer {
     opacity: 0.8;
     margin: 0;
 }
-
 .footer-bottom a {
     color: var(--accent-color);
     text-decoration: none;
     transition: all 0.3s ease;
 }
-
 .footer-bottom a:hover {
     opacity: 0.8;
 }
-
 /* RESPONSIVE DESIGN  */
 @media (max-width: 1024px) {
     h1.logo {
         font-size: 2.3em;
     }
-
     .section-title {
         font-size: 2.3em;
     }
-
     .product-grid {
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
-
     section.hero {
         background-attachment: scroll;
     }
-
     .testimonials-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .newsletter-form {
         flex-direction: column;
     }
-
     .newsletter-form input,
     .newsletter-btn {
         width: 100%;
     }
 }
-
 @media (max-width: 768px) {
     .hamburger {
         display: block;
     }
-
     .nav-links {
         display: none;
         position: absolute;
@@ -572,160 +546,126 @@ footer {
         width: 100%;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .nav-links a {
         padding: 15px 20px;
         border-bottom: 1px solid #e0e0e0;
         width: 100%;
         text-align: left;
     }
-
     h1.logo {
         font-size: 1.8em;
         padding: 25px 15px;
     }
-
     .hero-title {
         font-size: 2.5em;
     }
-
     .hero-subtitle {
         font-size: 1.2em;
     }
-
     .section-title {
         font-size: 1.8em;
         margin: 50px 15px 40px 15px;
     }
-
     .product-grid {
         grid-template-columns: 1fr;
         gap: 30px;
         padding: 30px 15px;
     }
-
     .product-card {
         width: 100%;
     }
-
     nav a {
         padding: 12px 15px;
         font-size: 0.85em;
     }
-
     .info-section {
         padding: 50px 15px;
         gap: 25px;
     }
-
     .info-box {
         padding: 35px 25px;
     }
-
     section.hero {
         min-height: 400px;
         padding: 60px 20px;
         background-attachment: scroll;
     }
-
     .testimonials-grid {
         grid-template-columns: 1fr;
         gap: 25px;
     }
-
     .testimonials-section {
         padding: 60px 15px;
     }
-
     .newsletter-section {
         padding: 60px 15px;
     }
-
     .newsletter-section h2 {
         font-size: 2em;
     }
-
     .newsletter-section p {
         font-size: 1em;
     }
-
     .newsletter-form {
         flex-direction: column;
     }
-
     .newsletter-form input,
     .newsletter-btn {
         width: 100%;
     }
-
     .footer-content {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
     .footer-bottom {
         flex-direction: column;
         text-align: center;
     }
 }
-
 @media (max-width: 480px) {
     h1.logo {
         font-size: 1.4em;
         padding: 20px 10px;
     }
-
     .hero-title {
         font-size: 1.8em;
     }
-
     .hero-subtitle {
         font-size: 1em;
     }
-
     .hero-btn {
         padding: 12px 30px;
         font-size: 0.95em;
     }
-
     .section-title {
         font-size: 1.5em;
     }
-
     nav a {
         padding: 10px 12px;
         font-size: 0.8em;
     }
-
     section.hero {
         min-height: 350px;
         padding: 40px 15px;
     }
-
     .testimonial-card {
         padding: 25px;
     }
-
     .testimonial-text {
         font-size: 0.9em;
     }
-
     .newsletter-section {
         padding: 50px 15px;
     }
-
     .newsletter-section h2 {
         font-size: 1.5em;
     }
-
     .newsletter-section p {
         font-size: 0.95em;
     }
-
     .newsletter-form {
         flex-direction: column;
     }
@@ -754,11 +694,9 @@ footer {
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
     transition: left 0.5s ease;
 }
-
 .featured-item:hover .product-image-box::before {
     left: 100%;
 }
-
 .featured-item h3 {
     margin: 18px 15px 12px 15px;
     font-size: 19px;
@@ -766,7 +704,6 @@ footer {
     font-weight: 800;
     letter-spacing: 0.5px;
 }
-
 .product-price 
 {
     color: #dc143c;
@@ -775,7 +712,6 @@ footer {
     margin: 12px 15px 20px 15px;
     padding-bottom: 18px;
 }
-
 /* Headers */
 h2 {
     text-align: center;
@@ -784,18 +720,15 @@ h2 {
     letter-spacing: 2.5px;
     font-weight: 900;
 }
-
 h3 {
     font-weight: 800;
     letter-spacing: 1px;
 }
-
 body.homepage h2,
 body.homepage .section-title {
     color: white;
     text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
 }
-
 /* Info Section */
 .info-section {
     display: grid;
@@ -807,7 +740,6 @@ body.homepage .section-title {
     background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
     border-radius: 16px;
 }
-
 .info-box {
     text-align: center;
     padding: 35px;
@@ -819,7 +751,6 @@ body.homepage .section-title {
     position: relative;
     overflow: hidden;
 }
-
 .info-box::before {
     content: "";
     position: absolute;
@@ -831,16 +762,13 @@ body.homepage .section-title {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
-
 .info-box:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(220, 20, 60, 0.2);
 }
-
 .info-box:hover::before {
     opacity: 1;
 }
-
 .info-box h3 {
     font-size: 22px;
     color: #1a1a1a;
@@ -848,14 +776,12 @@ body.homepage .section-title {
     font-weight: 800;
     letter-spacing: 0.5px;
 }
-
 .info-box p {
     font-size: 15px;
     color: #555;
     margin: 0;
     line-height: 1.6;
 }
-
 /* Content Containers */
 .about-text, .shop-text, .gallery-text, .contact-info {
     max-width: 900px;
@@ -867,19 +793,16 @@ body.homepage .section-title {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     border-left: 5px solid #dc143c;
 }
-
 p {
     font-size: 18px;
     color: #555;
     line-height: 1.8;
     letter-spacing: 0.3px;
 }
-
 body.homepage hero.p 
 {
     color: #ddd;
 }
-
 /* Form */
 form {
     max-width: 600px;
@@ -890,7 +813,6 @@ form {
     box-shadow: 0 10px 40px rgba(0,0,0,0.1);
     border: 2px solid #f0f0f0;
 }
-
 input, textarea, select {
     width: 100%;
     padding: 14px 16px;
@@ -903,18 +825,15 @@ input, textarea, select {
     transition: all 0.3s ease;
     font-family: inherit;
 }
-
 input:focus, textarea:focus, select:focus {
     outline: none;
     border-color: #dc143c;
     box-shadow: 0 0 0 3px rgba(220, 20, 60, 0.1);
     transform: translateY(-2px);
 }
-
 input::placeholder, textarea::placeholder {
     color: #999;
 }
-
 label {
     display: block;
     text-align: left;
@@ -924,11 +843,9 @@ label {
     font-size: 14px;
     letter-spacing: 0.5px;
 }
-
 .form-group {
     margin-bottom: 20px;
 }
-
 /* Footer */
 footer {
     text-align: center;
@@ -939,7 +856,6 @@ footer {
     border-top: 4px solid #dc143c;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.3);
 }
-
 footer p {
     color: #bbb;
     font-size: 15px;
@@ -947,11 +863,9 @@ footer p {
     margin: 0;
     font-weight: 500;
 }
-
 body.homepage footer {
     background: linear-gradient(135deg, rgba(13, 13, 13, 0.95) 0%, rgba(26, 26, 26, 0.95) 100%);
 }
-
 /* Section Title */
 .section-title {
     text-align: center;
@@ -965,7 +879,6 @@ body.homepage footer {
     padding: 20px 0;
     color: #1a1a1a;
 }
-
 .section-title::before {
     content: "";
     position: absolute;
@@ -978,7 +891,6 @@ body.homepage footer {
     border-radius: 5px;
     animation: expandWidth 0.8s ease-out;
 }
-
 @keyframes expandWidth {
     from {
         width: 0;
@@ -987,11 +899,9 @@ body.homepage footer {
         width: 150px;
     }
 }
-
 body.homepage .section-title {
     color: white;
 }
-
 /* Fullscreen Hero (for other pages if needed) */
 .hero-fullscreen {
     height: 100vh;
@@ -1000,7 +910,6 @@ body.homepage .section-title {
     background-repeat: no-repeat;
     position: relative;
 }
-
 .hero-overlay {
     position: absolute;
     bottom: 20%;
@@ -1010,19 +919,16 @@ body.homepage .section-title {
     border-radius: 8px;
     text-align: center;
 }
-
 .hero-overlay h2 {
     color: white;
     font-size: 20px;
     margin: 15px 0;
 }
-
 .hero-overlay p {
     color: white;
     font-size: 20px;
     margin: 15px 0;
 }
-
 .hero-btn {
     display: inline-block;
     background: firebrick;
@@ -1033,11 +939,9 @@ body.homepage .section-title {
     border-radius: 4px;
     transition: background 0.3s;
 }
-
 .hero-btn:hover {
     background: black;
 }
-
 /* Social Media Icons */
 .social-icons {
     display: flex;
@@ -1046,7 +950,6 @@ body.homepage .section-title {
     margin-top: 25px;
     flex-wrap: wrap;
 }
-
 .social-icons a {
     display: inline-flex;
     align-items: center;
@@ -1062,20 +965,17 @@ body.homepage .section-title {
     box-shadow: 0 6px 16px rgba(220, 20, 60, 0.35);
     border: 2px solid transparent;
 }
-
 .social-icons a:hover {
     transform: translateY(-6px) scale(1.15) rotate(5deg);
     box-shadow: 0 12px 30px rgba(220, 20, 60, 0.5);
     background: linear-gradient(135deg, #ff6347, #dc143c);
     border-color: rgba(255,255,255,0.3);
 }
-
 .social-icons i {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 /* Submit Buttons */
 .contact-submit-btn, .feedback-submit-btn, .submit-btn, 
 form button[type="submit"] {
@@ -1094,21 +994,18 @@ form button[type="submit"] {
     display: inline-block !important;
     margin-top: 10px !important;
 }
-
 .contact-submit-btn:hover, .feedback-submit-btn:hover, .submit-btn:hover,
 form button[type="submit"]:hover {
     transform: translateY(-4px) scale(1.05) !important;
     box-shadow: 0 12px 30px rgba(220, 20, 60, 0.5) !important;
     background: linear-gradient(135deg, #ff6347, #dc143c) !important;
 }
-
 /* About Page Enhancements */
 .about-container, .contact-container, .feedback-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 40px 20px;
 }
-
 .about-section, .contact-info-section, .contact-form-section {
     margin: 40px 0;
     padding: 30px;
@@ -1117,7 +1014,6 @@ form button[type="submit"]:hover {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     border-left: 5px solid #dc143c;
 }
-
 .about-section h3, .contact-info-section h3, .contact-form-section h3 {
     color: #1a1a1a;
     font-size: 24px;
@@ -1128,17 +1024,14 @@ form button[type="submit"]:hover {
     line-height: 1.8;
     margin-bottom: 15px;
 }
-
 .mission-list, .values-container, .why-choose-grid {
     margin: 20px 0;
 }
-
 /*  COMPACT CARD STYLING */
 .card {
     display: flex;
     flex-direction: column;
 }
-
 .card-body {
     padding: 12px !important;
 }
@@ -1154,7 +1047,6 @@ form button[type="submit"]:hover {
     height: 180px;
     object-fit: cover;
 }
-
 .mission-list li {
     text-align: left;
     margin: 12px 0;
@@ -1167,7 +1059,6 @@ form button[type="submit"]:hover {
     gap: 25px;
     margin-top: 25px;
 }
-
 .why-choose-item, .value-item, .benefit-item {
     background: linear-gradient(135deg, #f9f9f9 0%, #fff 100%);
     padding: 25px;
